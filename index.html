@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+       body{
+        font-family: "proxima-nova", sans-serif;
+       }
+        .navbar{
+            
+            max-height: 90px;
+            /* background-color:white; */
+            padding: 20px;
+        }
+        .navcontainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color:white;
+            position: relative;
+        }
+        .navbar a{
+            text-decoration: none;
+            margin-left:30px ;
+            color :#3d4152;         
+        }
+        .navcontainer .active{
+            border-bottom:3px solid #3d4152 ;
+        }
+        .logo{
+           
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
+            text-align: center;
+            margin-left:70px ;
+            margin-right: 40px;
+            padding: 10px;
+            position: relative;
+        }
+        .logoname{
+        
+            font-size: 30px;
+            /* margin-left:0px !important; */
+        }
+        .smallname{
+            font-size: 10px;
+            /* margin-left:0px !important; */
+        }
+        .logo .circle{
+            width: 30px;
+            height: 30px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+        }
+        .logo .circle img{
+            height: 20px;
+            width: 20px;
+        }
+        .banner{
+            margin-top: 15px;
+            width: 100%;
+            min-height: 500px;
+            /* background-color: aqua; */
+            background-image: url("https://cdn.pixabay.com/photo/2017/10/13/15/29/coffee-2847957_960_720.jpg");
+            background-repeat:no-repeat ;
+            background-size:100% 100%;
+            position: relative;
+        }
+        .heading{
+          
+           position:absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+            color:white;
+           
+        }
+     .heading h1{
+       
+
+         font-weight: 100;
+         font-size: 40px;
+     }
+     .heading h4{
+         position: relative;
+         margin-left: 130px;
+     }
+     .packages{
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+         width: 100%;
+         height:300px;
+         background:rgb(245, 244, 242);
+         align-items: center;
+         justify-content: center;
+     }
+     .packagename , .packagedesc,.slots{
+        margin-bottom: 20px;
+     }
+     .slots{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         width: 350px;
+         margin-top: 10px;
+
+     }
+     .slots a{
+         text-decoration: none;
+         padding: 20px;
+         background-color: black;
+         color:white;
+     }
+     .specialization{
+         width: 100%;
+         height: 500px;
+         background-color: rgb(214, 209, 209,0.5);
+         display: flex;
+         flex-direction: column;
+         /* flex-wrap: wrap; */
+         align-items: center;
+         justify-self: center;
+         
+     }
+     .boxes{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         width:65%;
+         margin-top: 20px;
+         align-items: center;
+         justify-content: space-around;
+     }
+     .boxes .box{
+         width: 200px;
+         height: 300px;
+         background: black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .maincontainer{
+         height: 500px;
+         /* background-color: bisque; */
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         justify-content: flex-start;
+         align-items: center;
+     }
+     .expect{
+         margin-top:30px ;
+     }
+     .img_Des{
+         width: 70%;
+         /* background-color: rgb(248, 245, 239); */
+         height: 400px;
+         margin-top: 20px;
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+     .box1{
+         width:45%;
+        height: 400px;
+        /* background-color: pink; */
+     }
+     .box1 img{
+         width: 100%;
+         height: 400px;
+     }
+     .des{
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+        
+         align-items: center;
+         justify-content: flex-start;
+     }
+     .numdes{
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         margin-bottom: 30px;
+
+     }
+   
+     .numbers {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border: 1px solid black;
+  background-color:transparent;
+  color:black;
+}
+.description{
+    width: 400px;
+    /* background-color: red; */
+    text-align: left;
+    margin-left: 15px;
+}
+.book_slot{
+    text-decoration: none;
+         padding: 20px;
+         background-color: black;
+         color:white;
+}
+.packageimg{
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/27/22/06/sea-1284467__340.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 10px;
+  }
+  footer{
+      height: 200px;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  footer a{
+    width:50px;
+   height: 50px;
+   
+    border-radius: 50px;
+    text-align: center;
+    margin:1px;
+    color:white;
+}
+  footer a i{
+    color: white;
+    font-size: x-large !important;
+  }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navcontainer">
+        <a href="#">HOME </a>
+        <a href="#">ABOUT </a>
+        <a class ="active"href="#">SERVICES </a>
+        <div class="logo">
+            <b class="logoname"href="#">EATON WELLNESS </b>
+            <p class="smallname"href="#">We care for your health </p>
+            <div class="circle"><img src="https://raw.githubusercontent.com/riteshf/files/main/logo.svg"/></div>
+        </div>
+        <a href="#">BLOG </a>
+        <a href="#">FAQS </a>
+        <a href="#">CONTACT </a>
+    </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+       <div class="heading">
+           <h1>Health & Wellness Services</h1>
+           <h4>Providing Quality Services</h4>
+    
+    </div>
+    </div>
+
+    <!-- packages -->
+    <div class="packages">
+        <div class="packagename" style="font-size: 30px;">Custom Packages</div>
+        <div class="packagedesc">Schedule a free 20 minutes Call | We will make sure your wellness goals </div>
+        <div class="slots">
+            <a href="#" class="one">Book Your Slot</a>
+            <a href="#" class="two">See Packages</a>
+        </div>
+    </div>
+    <div class="specialization">
+        <div style="font-size: 30px; margin-top: 15px;">Specializing In</div>
+        <div style="margin-top: 15px;"><p> Expert's Advice For This </p></div>
+        <div class="boxes">
+            <div class="box ">
+                <div class="specs">
+                    <h3 style="color:white">Mindful+</h3>
+                <h3 style="color:white">Intuitive Eating</h3>
+                </div>     
+            </div>
+            <div class=" box ">
+                <div class="specs">
+                    <h3 style="color:white">Food Allergies</h3>
+                <h3 style="color:white">+Sensitivites</h3>
+                </div>
+                
+            </div>
+            <div class="box">
+                <div class="specs">
+                    <h3 style="color:white">Digestive</h3>
+                    <h3 style="color:white">Health</h3>
+                </div>
+               
+            </div>
+            <div class=" box ">
+                <div class="specs">
+                    <h3 style="color:white">Immune</h3>
+                <h3 style="color:white">System Support</h3>
+                </div>
+                
+            </div>
+            <div style="margin-top: 10px;"><p>To Get's Strated See Here Below</p></div>
+        </div>
+    </div>
+    <div class="maincontainer">
+        <div class="expect"><h2>What to Expect</h2></div>
+        <div class="img_Des">
+            <div class="box1"><img src="https://cdn.pixabay.com/photo/2016/08/18/18/40/salad-1603608__340.jpg" alt="">
+            </div>
+            <div class="des box1">
+                <div class="numdes">
+                    <span class="numbers">1</span>
+                   <div class="description"><b>div.textLorem, ipsum dolor </b><br> adipisicing elit.Facere earum nostrum in, neque atque dicta.</div> 
+                  </div>
+                  <div class="numdes">
+                    <span class="numbers">2</span>
+                    <div class="description"><b>div.textLorem, ipsum dolor </b><br> adipisicing elit.Facere earum nostrum in, neque atque dicta.</div> 
+                  </div>
+                  <div class="numdes">
+                    <span class="numbers">3</span>
+                    <div class="description"><b>div.textLorem, ipsum dolor </b><br> adipisicing elit.Facere earum nostrum in, neque atque dicta.</div> 
+                  </div>
+                  <div class="numdes">
+                    <span class="numbers">4</span>
+                    <div class="description"><b>div.textLorem, ipsum dolor </b><br> adipisicing elit.Facere earum nostrum in, neque atque dicta.</div> 
+                  </div>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="packages packageimg">
+        <div class="packagename" style="font-size: 30px;">Don't See What You're Looking for ?</div>
+        <div class="packagedesc"><b>Schedule a free 20 minutes Call | We will make sure your wellness goals</b> </div>
+       
+            <a href="#"class="book_slot" >Book Your Slot</a>
+       
+    </div>
+    <footer>
+        <div style="color:white; margin-top: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="socialmedia ">
+            <a href="#" class="name  "  >
+              <i class="fa fa-github" ></i><!-- fa-2x -->
+         </a>
+         <a href="#" class="name " >
+             <i class="fa fa-instagram" ></i>
+         </a>
+         <a href="#" class="name" >
+             <i class="fa fa-twitter" ></i>
+         </a>
+         <a href="#" class="name" >
+             <i class="fa fa-telegram" ></i>
+         </a>
+         <a href="#" class="name" >
+             <i class="fa fa-linkedin" ></i>
+         </a>
+          </div>
+         <b style="color:white;margin-bottom:65px">Thank You <span>🙏🏻</span></b>
+    </footer>
+</body>
+</html>
